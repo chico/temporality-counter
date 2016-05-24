@@ -8,14 +8,32 @@ The following will install [https://www.npmjs.org/package/temporality-counter](h
 npm install temporality-counter -S
 ```
 
+### Install Postgres
+
+OSX:
+```
+brew install postgresql
+postgres -D /usr/local/var/postgres`
+```
+
+For other platforms see [https://wiki.postgresql.org/wiki/Detailed_installation_guides](https://wiki.postgresql.org/wiki/Detailed_installation_guides).
+
+### Create counter database and table
+
+```
+psql -d postgres -c 'create database counter'
+git clone git@github.com:chico/temporality-counter.git
+psql -d counter -a -f ./temporality-counter/sql/postgres/counter.sql
+psql -d counter -c 'select * from counter'
+```
+
 ## Database support
 
-Postgres is currently supported, more databases coming soon.
+[Postgres](http://www.postgresql.org) is currently supported, more databases coming soon.
 
 Please submit a new issue to fast track a database that you would like supported.
 
 ## Usage
-
 
 ### Increment counter
 
@@ -79,26 +97,6 @@ counter.countByIdAndTypeAsync(counterId, counterType, lastHour, counter.temporal
 ```
 
 ## Testing
-
-### Install Postgres
-
-OSX:
-```
-brew install postgresql
-postgres -D /usr/local/var/postgres`
-```
-
-For other platforms see [https://wiki.postgresql.org/wiki/Detailed_installation_guides](https://wiki.postgresql.org/wiki/Detailed_installation_guides).
-
-### Create counter database and table
-
-```
-psql -d postgres -c 'create database counter'
-psql -d counter -a -f ./sql/postgres/counter.sql
-psql -d counter -c 'select * from counter'
-```
-
-### Run test
 
 ```
 npm install -g mocha
