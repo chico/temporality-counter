@@ -1,0 +1,26 @@
+{
+  "name": "temporality-counter",
+  "version": "0.0.1",
+  "description": "Temporality Counter",
+  "main": "lib/main.js",
+  "scripts": {
+    "test": "mocha test/main.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:chico/temporality-counter.git"
+  },
+  "author": "Chico Charlesworth <chico.charlesworth@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chico/temporality-counter/issues"
+  },
+  "dependencies": {
+    "node-uuid": "^1.4.7",
+    "pg": "^4.5.5"
+  },
+  "devDependencies": {
+    "bluebird": "^3.4.0",
+    "chai": "^3.5.0"
+  }
+}
