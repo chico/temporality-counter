@@ -1,5 +1,22 @@
 # Temporality Counter
 
+Temporality Counter is a simple NodeJS library that efficiently increments counters to a database based on a given temporality.
+
+The library can then query the database and return a total count for a given time period and temporality, for example:
+	* How many users have registered to our website?
+	* How many web hits did my website receive during the last hour?
+	* How many API calls were made since midnight?
+	* How many login attempts did a user try in the last 30 minutes?
+	* How many web purchases have been made in the past 30 days? How many so far this month?
+
+Supported temporalities are:
+ * ALL_TIME - Keeps a ever running counter.
+ * DAILY - One counter for every day, each starting at midnight.
+ * HOURLY - One counter for every hour, each starting at the beginning of the hour.
+ * EVERY_MINUTE - One counter for every minute, each starting at the beginning of the minute.
+
+Choose one or more temporalities that fits your requirements. The more granular the temporality (e.g. EVERY_MINUTE) the more rows will be kept in the database, and therefore potentially more expensive query times. If you wanted to know a count for the last 60 minutes then you should choose EVERY_MINUTE, for the last 24 hours then HOURLY, for the last 30 days then DAILY, and for all time then ALL_TIME.
+
 ## Installation
 
 The following will install [https://www.npmjs.org/package/temporality-counter](https://www.npmjs.org/package/temporality-counter) and add it as a dependency to your project:
