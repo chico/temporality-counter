@@ -3,11 +3,11 @@
 Temporality Counter is a simple NodeJS library that efficiently increments counters to a database based on a given temporality.
 
 The library can then query the database and return a total count for a given time period and temporality, for example:
-	* How many users have registered to our website?
-	* How many web hits did my website receive during the last hour?
-	* How many API calls were made since midnight?
-	* How many login attempts did a user try in the last 30 minutes?
-	* How many web purchases have been made in the past 30 days? How many so far this month?
+ * How many users have registered to our website?
+ * How many web hits did my website receive during the last hour?
+ * How many API calls were made since midnight?
+ * How many login attempts did a user try in the last 30 minutes?
+ * How many web purchases have been made in the past 30 days? How many so far this month?
 
 Supported temporalities are:
  * ALL_TIME - Keeps a ever running counter.
