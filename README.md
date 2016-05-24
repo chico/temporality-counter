@@ -79,18 +79,18 @@ Promise.promisifyAll(counter);
 
 var counterId = 'mysite-hit', counterType = 'web';
 
-counter.incrementAndGetAsync(counterId, counterType, counter.temporality.EVERY_MINUTE).then(count) {
+counter.incrementAndGetAsync(counterId, counterType, counter.temporality.EVERY_MINUTE).then(function(count) {
 	console.log(count);
 });
 
 var lastHour = new Date();
 lastHour.setHours(start.getHours()-1);
 
-counter.countAsync(counterId, lastHour, counter.temporality.EVERY_MINUTE).then(count) {
+counter.countAsync(counterId, lastHour, counter.temporality.EVERY_MINUTE).then(function(count) {
 	console.log(count);
 });
 
-counter.countByIdAndTypeAsync(counterId, counterType, lastHour, counter.temporality.EVERY_MINUTE).then(count) {
+counter.countByIdAndTypeAsync(counterId, counterType, lastHour, counter.temporality.EVERY_MINUTE).then(function(count) {
 	console.log(count);
 });
 
