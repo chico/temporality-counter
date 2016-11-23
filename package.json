@@ -16,8 +16,8 @@
     "url": "https://github.com/chico/temporality-counter/issues"
   },
   "dependencies": {
-    "node-uuid": "^1.4.7",
-    "pg": "^4.5.5"
+    "pg": "^4.5.5",
+    "uuid": "^3.0.0"
   },
   "devDependencies": {
     "bluebird": "^3.4.0",
