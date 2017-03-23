@@ -1,4 +1,4 @@
-# Temporality Counter
+# Temporality Counter Library
 
 Temporality Counter is a simple NodeJS library that efficiently increments counters to a database based on a given temporality.
 
